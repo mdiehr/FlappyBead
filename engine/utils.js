@@ -108,7 +108,7 @@ Dictionary.prototype.names = function () {
 	return names;
 };
 
-// Object inheritance
+// Object inheritance from http://eloquentjavascript.net/chapter8.html#p7e0e1720d924931f
 Object.prototype.create = function() {
   var object = clone(this);
   if (typeof object.construct == "function")
