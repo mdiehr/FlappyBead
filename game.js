@@ -1,5 +1,7 @@
 // game.js for Perlenspiel 3.1.0
 
+var PS = PERLENSPIEL.Create();
+
 PS.debug = function() {
 	console.log(arguments);
 }
@@ -8,10 +10,13 @@ PS.debug = function() {
 // Initializes the game
 PS.init = function( system, options ) {
 	"use strict";
+
+	InitPalette();
+
 	GAME.initialize();
 	GAME.Spawn(BirdController, new Point(-1,-1));
 
-	var footer = document.getElementById("footer");
+	var footer = document.getElementById("game-footer");
 	var sourceLink = document.createElement('a');
 	sourceLink.setAttribute('href', "./FlappyBead.zip");
 	sourceLink.innerText = "Download Source";
@@ -54,3 +59,4 @@ PS.input = function( sensors, options ) {
 	"use strict";
 };
 
+PS.start();

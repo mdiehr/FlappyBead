@@ -8,7 +8,7 @@ var sBackground = {color:skyColor, glyph:0, alpha:255, radius:0, borderColor:sky
 var sBackgroundFast = {color:skyColor, glyph:0};
 var sTransparent = {alpha:0};
 
-(function(){
+function InitPalette() {
 	var ColorSpec = function(color) {
 		this.color = color;
 	}
@@ -29,5 +29,4 @@ var sTransparent = {alpha:0};
 	sPalette.push( new ColorSpec( PS.makeRGB(218, 212,  94 ) ) );
 	sPalette.push( new ColorSpec( PS.makeRGB(222, 238, 214 ) ) );
 	
-})();
-
+};

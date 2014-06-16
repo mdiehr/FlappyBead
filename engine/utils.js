@@ -15,54 +15,6 @@ function randBetween(lo, hi) {
 	return value + lo;
 }
 
-PS.style = function(x, y, style) {
-	if( typeof style !== "object" )
-		throw new Error( "Style was invalid: " + style );
-	ApplyStyle(x, y, style);
-};
-
-// Bead Style
-function ApplyStyle(x, y, style) {
-	if( typeof style.color !== "undefined" )
-		PS.color(x, y, style.color);
-	if( typeof style.alpha !== "undefined" )
-		PS.alpha(x, y, style.alpha);
-	if( typeof style.fade !== "undefined" )
-		PS.fade(x, y, style.fade);
-	if( typeof style.scale !== "undefined" )
-		PS.scale(x, y, style.scale);
-	if( typeof style.radius !== "undefined" )
-		PS.radius(x, y, style.radius);
-	if( typeof style.data !== "undefined" )
-		PS.data(x, y, style.data);
-	if( typeof typeof style.exec === "function" )
-		PS.exec(x, y, style.exec);
-	if( typeof style.visible !== "undefined" )
-		PS.visible(x, y, style.visible);
-	if( typeof style.active !== "undefined" )
-		PS.active(x, y, style.active);
-	
-	if( typeof style.border !== "undefined" )
-		PS.border(x, y, style.border);
-	if( typeof style.borderColor !== "undefined" )
-		PS.borderColor(x, y, style.borderColor);
-	if( typeof style.borderAlpha !== "undefined" )
-		PS.borderAlpha(x, y, style.borderAlpha);
-	if( typeof style.borderFade !== "undefined" )
-		PS.borderFade(x, y, style.borderFade);
-	
-	if( typeof style.glyph !== "undefined" )
-		PS.glyph(x, y, style.glyph);
-	if( typeof style.glyphColor !== "undefined" )
-		PS.glyphColor(x, y, style.glyphColor);
-	if( typeof style.glyphAlpha !== "undefined" )
-		PS.glyphAlpha(x, y, style.glyphAlpha);
-	if( typeof style.glyphScale !== "undefined" )
-		PS.glyphScale(x, y, style.glyphScale);
-	if( typeof style.glyphFade !== "undefined" )
-		PS.glyphFade(x, y, style.glyphFade);
-}
-
 // Runs a function for each item inside of an array
 function forEach(array, action) {
 	for (var i = 0; i < array.length; i++)
