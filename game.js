@@ -1,7 +1,5 @@
 // game.js for Perlenspiel 3.1.0
 
-var PS = PERLENSPIEL.Create();
-
 PS.debug = function() {
 	console.log(arguments);
 }
@@ -58,5 +56,3 @@ PS.exitGrid = function( options ) {
 PS.input = function( sensors, options ) {
 	"use strict";
 };
-
-PS.start();
